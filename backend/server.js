@@ -6,7 +6,7 @@ const db = require('./db');
 const app = express();
 app.use(bodyParser.json());
 
-db.pool.query('CREATE TABLE lists (id INTEGER AUTO_INCREMENT, value Text, PRIMARY KEY (id)', function(err, result, fileds){
+db.pool.query('CREATE TABLE lists (id INTEGER AUTO_INCREMENT, value Text, PRIMARY KEY (id))', function(err, result, fileds){
     console.log('result', result);
 });
 
