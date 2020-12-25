@@ -20,7 +20,7 @@ app.get('/api/values', function(req,res){
 })
 
 app.post('/api/value', function(req, res){
-    db.pool.query('INSERT INTO lists (value) VALUES("${req.body.value}")', function(err, result){
+    db.pool.query('INSERT INTO lists (value) VALUES(?)',[req.body.value], function(err, result){
         if(err)
             return res.status(500).send(err);
         else
