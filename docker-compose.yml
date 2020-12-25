@@ -27,8 +27,8 @@ services:
       - ./backend:/app
     environment: 
       MYSQL_HOST: mysql
-      MYSQL_USER: brisgi
-      MYSQL_ROOT_PASSWORD: ckdghks12
+      MYSQL_USER: $MYSQL_USER
+      MYSQL_ROOT_PASSWORD: $MMYSQL_ROOT_PASSWORD
       MYSQL_DATABASE: myapp
       MYSQL_PORT: 3306   
 
@@ -42,5 +42,5 @@ services:
   #     - ./mysql/mysql_data:/var/lib/mysql
   #     - ./mysql/sqls/:/docker-entrypoint-initdb.d/
   #   environment: 
-  #     MYSQL_ROOT_PASSWORD: ckdghks12
+  #     MYSQL_ROOT_PASSWORD: $MMYSQL_ROOT_PASSWORD
   #     MYSQL_DATABASE: myapp
